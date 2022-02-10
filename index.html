@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="submenu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <body>
+        <div id="wrapper">
+            <div id="header">
+                <nav class="container">
+                    <a href="" id="logo">
+                        <img src="/sub/images/logogithub.png" alt="">
+                    </a>
+                    <ul id="main-menu">
+                        <li><a href="#">Trang chủ</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li>
+                            <a href="#">Tướng</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#">Danh sách tướng</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Yasuo</a></li>
+                                        <li><a href="#">Garen</a></li>
+                                        <li><a href="#">Riven</a></li>
+                                        <li><a href="#">Lux</a></li>
+                                        <li><a href="#">Katarina</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Điểm thông thạo</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="">Thông thạo 1</a></li>
+                                        <li><a href="">Thông thạo 2</a></li>
+                                        <li><a href="">Thông thạo 3</a></li>
+                                        <li><a href="">Thông thạo 4</a></li>
+                                        <li><a href="">Thông thạo 5</a></li>
+                                        <li><a href="">Thông thạo 6</a></li>
+                                        <li>
+                                            <a href="">Thông thạo 7</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">Chiến tướng</a></li>
+                                                <li><a href="#">Vua tử thần</a></li>
+                                                <li><a href="#">Kẻ hành quyết</a></li>
+                                                <li><a href="#">Xạ thủ</a></li>
+                                                <li><a href="#">Kẻ hiếu chiến</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Thần hỏa</a></li>
+                                <li>
+                                    <a href="#">Kỹ năng</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Nội tại</a></li>
+                                        <li><a href="#">Q- Kĩ năng 1</a></li>
+                                        <li><a href="#">W- Kĩ năng 2</a></li>
+                                        <li><a href="#">E- Kĩ năng 3</a></li>
+                                        <li><a href="#">R- Kĩ năng 4</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Tải Game</a></li>
+                        <li><a href="#">Hỗ trợ</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <form class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" name="search" placeholder="Tìm kiếm">
+
+            </form>
+            <div id="wp-content"></div>
+            <div id="footer"></div>
+
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script>
+            $(document).ready(function() {
+                // tìm tất cả các li có sub-menu và thêm vào nó class: has-child   
+                $('.sub-menu').parent('li').addClass('has-child');
+            });
+        </script>
+
+    </body>
+
+</html>

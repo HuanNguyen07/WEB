@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+#header {
+    background-color: #131921;
+}
+
+
+/* định dạng cho thanh menu và logo cùng 1 hàng*/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+#logo {}
+
+#logo img {
+    max-width: 60px;
+    height: auto;
+}
+
+
+/* định dạng cho thanh menu cùng 1 hàng*/
+
+#main-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#main-menu li {
+    position: relative;
+}
+
+#main-menu li a {
+    color: #f8f8f8;
+    display: block;
+    padding: 18px 20px;
+    text-decoration: none;
+}
+
+
+/* tạo menu cấp 2*/
+
+#main-menu ul.sub-menu {
+    position: absolute;
+    background-color: #131921;
+    padding: 15px 0px;
+    list-style: none;
+    width: 180px;
+    border-bottom: 1px solid #434343;
+    display: none;
+}
+
+#main-menu ul.sub-menu a {
+    padding: 8px 15px;
+    border-bottom: 1px solid #434343;
+    left: 0;
+}
+
+#main-menu ul.sub-menu li:last-child a {
+    border: none;
+}
+
+#main-menu ul.sub-menu li:hover>a {
+    border-bottom: 1px solid #6e6e6e;
+}
+
+
+/* tạo menu cấp 3*/
+
+#main-menu ul.sub-menu ul.sub-menu {
+    left: 180px;
+    top: -15px;
+}
+
+
+/* khi hover chuột vào li thì hiện ra .sub-menu */
+
+#main-menu li:hover>ul.sub-menu {
+    display: block;
+}
+
+
+/* thiết lập border khi hover*/
+
+#main-menu>li a {
+    position: relative;
+}
+
+#main-menu>li a::before {
+    content: "";
+    height: 4px;
+    width: 0px;
+    background-color: red;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#main-menu>li:hover>a::before {
+    width: 100%;
+}
+
+
+/* thêm mũi tên cho những phần tử có class: has-child*/
+
+#main-menu>li.has-child::after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f107";
+    color: #858585;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 18px 0;
+}
+
+#main-menu .sub-menu>li.has-child::after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f105";
+    color: #858585;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    padding: 8px 0;
+}
+
+
+/* khi hover chuột vào sub-menu li thì sẽ có màu đỏ*/
+
+#main-menu .sub-menu li:hover>a {
+    color: red;
+}
+
+#main-menu .sub-menu>li.has-child:hover::after {
+    color: red;
+}
+
+
+/* định nghĩa thanh tìm kiếm */
+
+input [type="text"] {
+    width: 200px;
+    height: 30px;
+}
